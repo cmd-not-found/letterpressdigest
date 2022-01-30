@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:cc="http://web.resource.org/cc/" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 	<channel>
-		<atom:link href="https://letterpressdigest.libsyn.com/rss" rel="self" type="application/rss+xml"/>
+		<atom:link href="https://letterpressdigest.s3.us-east-2.amazonaws.com/feed.xml" rel="self" type="application/rss+xml"/>
 		<title>Letterpress Digest: A Podcast About Letterpress Printing</title>
 		<pubDate>Mon, 21 May 2018 08:00:00 +0000</pubDate>
 		<lastBuildDate>Tue, 30 Jun 2020 17:35:29 +0000</lastBuildDate>
-		<generator>Libsyn WebEngine 2.0</generator>
 		<link>http://letterpressdigest.com</link>
 		<language>en</language>
 		<copyright><![CDATA[© 2018 - Letterpress Digest.]]></copyright>
 		<docs>http://letterpressdigest.com</docs>
-		<managingEditor>podcast@letterpressdigest.com (podcast@letterpressdigest.com)</managingEditor>
+		<managingEditor>letterpressdigest@gmail.com (letterpressdigest@gmail.com)</managingEditor>
 		<itunes:summary><![CDATA[In the “Letterpress Digest” podcast, novice printer Jordan Berry talks about all things letterpress with some of the most influential and experienced artists, designers, and printers who are using letterpress printing today. You’ll hear guests talk about the resurgence of letterpress and their first printing press as well as numerous helpful and practical tips like how people launched their letterpress business, what type of ink they use, how they found their printing press, how to design for letterpress, and many more. There will also be some fun and entertaining stories along the way, all centered around letterpress.]]></itunes:summary>
 		<image>
-			<url>https://ssl-static.libsyn.com/p/assets/0/9/8/e/098e32dd1672c185/letterpress_digest_type_final-min.png</url>
+			<url>https://letterpressdigest.s3.us-east-2.amazonaws.com/letterpress+digest+type_FINAL.jpg</url>
 			<title>Letterpress Digest: A Podcast About Letterpress Printing</title>
 			<link><![CDATA[http://letterpressdigest.com]]></link>
 		</image>
@@ -26,16 +25,16 @@
 		<itunes:category text="Arts">
 			<itunes:category text="Visual Arts"/>
 		</itunes:category>
-		<itunes:image href="https://ssl-static.libsyn.com/p/assets/0/9/8/e/098e32dd1672c185/letterpress_digest_type_final-min.png" />
+		<itunes:image href="https://letterpressdigest.s3.us-east-2.amazonaws.com/letterpress+digest+type_FINAL.jpg" />
 		<itunes:explicit>no</itunes:explicit>
 		<itunes:owner>
 			<itunes:name><![CDATA[Jordan Berry]]></itunes:name>
-			<itunes:email>podcast@letterpressdigest.com</itunes:email>
+			<itunes:email>letterpressdigest@gmail.com</itunes:email>
 		</itunes:owner>
 		<description><![CDATA[In the “Letterpress Digest” podcast, novice printer Jordan Berry talks about all things letterpress with some of the most influential and experienced artists, designers, and printers who are using letterpress printing today. You’ll hear guests talk about the resurgence of letterpress and their first printing press as well as numerous helpful and practical tips like how people launched their letterpress business, what type of ink they use, how they found their printing press, how to design for letterpress, and many more. There will also be some fun and entertaining stories along the way, all centered around letterpress.]]></description>
 		<itunes:subtitle><![CDATA[An interview and informational show about all things letterpress.]]></itunes:subtitle>
 		<itunes:type>episodic</itunes:type>
-			<itunes:new-feed-url>https://letterpressdigest.libsyn.com/rss</itunes:new-feed-url>
+			<itunes:new-feed-url>https://letterpressdigest.s3.us-east-2.amazonaws.com/feed.xml</itunes:new-feed-url>
 
 
 
@@ -44,10 +43,10 @@
 			<pubDate>Mon, 21 May 2018 08:00:00 +0000</pubDate>
 			<guid isPermaLink="false"><![CDATA[1da87ced2eee4246860fa20049941a1d]]></guid>
 			<link><![CDATA[http://letterpressdigest.com]]></link>
-			<itunes:image href="https://ssl-static.libsyn.com/p/assets/0/9/8/e/098e32dd1672c185/letterpress_digest_type_final-min.png" />
+			<itunes:image href="https://letterpressdigest.s3.us-east-2.amazonaws.com/letterpress+digest+type_FINAL.jpg" />
 			<description><![CDATA[<p>Andrew Steeves gets a bit philosophical on us as we discuss the inner workings of letterpress printing, publishing, and more! So much wisdom shared in only 1 hour.</p>]]></description>
 			<content:encoded><![CDATA[<p>Andrew Steeves gets a bit philosophical on us as we discuss the inner workings of letterpress printing, publishing, and more! So much wisdom shared in only 1 hour.</p>]]></content:encoded>
-			<enclosure length="60266719" type="audio/mpeg" url="https://traffic.libsyn.com/secure/letterpressdigest/013____Andrew_Steeves._Gaspereau_Press..mp3?dest-id=562602" />
+			<enclosure length="60266719" type="audio/mpeg" url="https://letterpressdigest.s3.us-east-2.amazonaws.com/013+__+Andrew+Steeves.+Gaspereau+Press..mp3" />
 			<itunes:duration>01:01:33</itunes:duration>
 			<itunes:explicit>no</itunes:explicit>
 			<itunes:keywords />
@@ -59,10 +58,10 @@
 			<pubDate>Fri, 06 Apr 2018 08:00:00 +0000</pubDate>
 			<guid isPermaLink="false"><![CDATA[596e43814a88b4e10040625c9c92eacc]]></guid>
 			<link><![CDATA[https://letterpressdigest.libsyn.com/012-jen-farrell-starshaped-press]]></link>
-			<itunes:image href="https://ssl-static.libsyn.com/p/assets/0/9/8/e/098e32dd1672c185/letterpress_digest_type_final-min.png" />
+			<itunes:image href="https://letterpressdigest.s3.us-east-2.amazonaws.com/letterpress+digest+type_FINAL.jpg" />
 			<description><![CDATA[<p>Jen is the proprietor and creative entrepreneur at Starshaped Press. She's been printing like it's 1929 since 1999 and is one of the foremost artists/printers pushing the fold to creatively use old type in new and energizing ways. Jen rocks!</p>]]></description>
 			<content:encoded><![CDATA[<p>Jen is the proprietor and creative entrepreneur at Starshaped Press. She's been printing like it's 1929 since 1999 and is one of the foremost artists/printers pushing the fold to creatively use old type in new and energizing ways. Jen rocks!</p>]]></content:encoded>
-			<enclosure length="57513622" type="audio/mpeg" url="https://traffic.libsyn.com/secure/letterpressdigest/012____Jen_Farrell._Starshaped_Press..mp3?dest-id=562602" />
+			<enclosure length="57513622" type="audio/mpeg" url="https://letterpressdigest.s3.us-east-2.amazonaws.com/012+__+Jen+Farrell.+Starshaped+Press..mp3" />
 			<itunes:duration>58:41</itunes:duration>
 			<itunes:explicit>no</itunes:explicit>
 			<itunes:keywords />
@@ -74,10 +73,10 @@
 			<pubDate>Tue, 16 Jan 2018 09:00:00 +0000</pubDate>
 			<guid isPermaLink="false"><![CDATA[5898d6eb70a057ce62e58ea033c1e9a3]]></guid>
 			<link><![CDATA[http://letterpressdigest.com]]></link>
-			<itunes:image href="https://ssl-static.libsyn.com/p/assets/0/9/8/e/098e32dd1672c185/letterpress_digest_type_final-min.png" />
+			<itunes:image href="https://letterpressdigest.s3.us-east-2.amazonaws.com/letterpress+digest+type_FINAL.jpg" />
 			<description><![CDATA[<p>Paul Moxon runs the Vanderblog @ vandercook.info and travels around teaching folks about Vandercook presses while also helping to repair them. He's got experience in mechanics, history, and the arts and shares a lot during this hour-long conversation.</p>]]></description>
 			<content:encoded><![CDATA[<p>Paul Moxon runs the Vanderblog @ vandercook.info and travels around teaching folks about Vandercook presses while also helping to repair them. He's got experience in mechanics, history, and the arts and shares a lot during this hour-long conversation.</p>]]></content:encoded>
-			<enclosure length="61787673" type="audio/mpeg" url="https://traffic.libsyn.com/secure/letterpressdigest/011____Paul_Moxon._Vanderblog._1.mp3?dest-id=562602" />
+			<enclosure length="61787673" type="audio/mpeg" url="https://letterpressdigest.s3.us-east-2.amazonaws.com/011+__+Paul+Moxon.+Vanderblog.+1.mp3" />
 			<itunes:duration>01:03:09</itunes:duration>
 			<itunes:explicit>no</itunes:explicit>
 			<itunes:keywords />
@@ -89,10 +88,10 @@
 			<pubDate>Tue, 19 Dec 2017 09:00:00 +0000</pubDate>
 			<guid isPermaLink="false"><![CDATA[17337f7e5913a27f7a98596afa2feb57]]></guid>
 			<link><![CDATA[http://letterpressdigest.com]]></link>
-			<itunes:image href="https://ssl-static.libsyn.com/p/assets/0/9/8/e/098e32dd1672c185/letterpress_digest_type_final-min.png" />
+			<itunes:image href="https://letterpressdigest.s3.us-east-2.amazonaws.com/letterpress+digest+type_FINAL.jpg" />
 			<description><![CDATA[<p>Britt Rohr is the Master of Quoin. She runs a custom letterpress shop called Swell Press Paper Co. in Los Angeles and her forte is watercolor dip-dye and deep impressions.</p>]]></description>
 			<content:encoded><![CDATA[<p>Britt Rohr is the Master of Quoin. She runs a custom letterpress shop called Swell Press Paper Co. in Los Angeles and her forte is watercolor dip-dye and deep impressions.</p>]]></content:encoded>
-			<enclosure length="50660763" type="audio/mpeg" url="https://traffic.libsyn.com/secure/letterpressdigest/010____Britt_Rohr._Swell_Press..mp3?dest-id=562602" />
+			<enclosure length="50660763" type="audio/mpeg" url="https://letterpressdigest.s3.us-east-2.amazonaws.com/010+__+Britt+Rohr.+Swell+Press..mp3" />
 			<itunes:duration>51:33</itunes:duration>
 			<itunes:explicit>no</itunes:explicit>
 			<itunes:keywords />
@@ -104,10 +103,10 @@
 			<pubDate>Tue, 05 Dec 2017 08:30:00 +0000</pubDate>
 			<guid isPermaLink="false"><![CDATA[ac4d3fdc7516afe60e20a42bf152efcb]]></guid>
 			<link><![CDATA[http://letterpressdigest.com]]></link>
-			<itunes:image href="https://ssl-static.libsyn.com/p/assets/0/9/8/e/098e32dd1672c185/letterpress_digest_type_final-min.png" />
+			<itunes:image href="https://letterpressdigest.s3.us-east-2.amazonaws.com/letterpress+digest+type_FINAL.jpg" />
 			<description><![CDATA[<p>Paper. Steve Varvaro has over 30 years in the paper business. We spend the hour talking about all things paper and how it applies to letterpress, including the difference in text vs. cover, paper weights, thickness, finish, grain, and so much more.</p>]]></description>
 			<content:encoded><![CDATA[<p>Paper. Steve Varvaro has over 30 years in the paper business. We spend the hour talking about all things paper and how it applies to letterpress, including the difference in text vs. cover, paper weights, thickness, finish, grain, and so much more.</p>]]></content:encoded>
-			<enclosure length="62795372" type="audio/mpeg" url="https://traffic.libsyn.com/secure/letterpressdigest/009____Steve_Varvaro._Southpaw_Printers..mp3?dest-id=562602" />
+			<enclosure length="62795372" type="audio/mpeg" url="https://letterpressdigest.s3.us-east-2.amazonaws.com/009+__+Steve+Varvaro.+Southpaw+Printers..mp3" />
 			<itunes:duration>01:04:11</itunes:duration>
 			<itunes:explicit>no</itunes:explicit>
 			<itunes:keywords />
@@ -119,10 +118,10 @@
 			<pubDate>Tue, 21 Nov 2017 09:00:00 +0000</pubDate>
 			<guid isPermaLink="false"><![CDATA[3a99ab39bdb8ad14dde83cfabda07fce]]></guid>
 			<link><![CDATA[http://letterpressdigest.com]]></link>
-			<itunes:image href="https://ssl-static.libsyn.com/p/assets/0/9/8/e/098e32dd1672c185/letterpress_digest_type_final-min.png" />
+			<itunes:image href="https://letterpressdigest.s3.us-east-2.amazonaws.com/letterpress+digest+type_FINAL.jpg" />
 			<description><![CDATA[<p>In this episode, Adrian Ramos of Ramco Roller gives us the rundown on all things rubber, including some history of letterpress rollers, the superball, and even the option for strawberry-scented rubber rollers (what?!?).</p>]]></description>
 			<content:encoded><![CDATA[<p>In this episode, Adrian Ramos of Ramco Roller gives us the rundown on all things rubber, including some history of letterpress rollers, the superball, and even the option for strawberry-scented rubber rollers (what?!?).</p>]]></content:encoded>
-			<enclosure length="60636150" type="audio/mpeg" url="https://traffic.libsyn.com/secure/letterpressdigest/008____Adrian_Ramos._Ramco_Roller..mp3?dest-id=562602" />
+			<enclosure length="60636150" type="audio/mpeg" url="https://letterpressdigest.s3.us-east-2.amazonaws.com/008+__+Adrian+Ramos.+Ramco+Roller..mp3" />
 			<itunes:duration>01:01:57</itunes:duration>
 			<itunes:explicit>no</itunes:explicit>
 			<itunes:keywords />
@@ -134,10 +133,10 @@
 			<pubDate>Tue, 07 Nov 2017 06:30:00 +0000</pubDate>
 			<guid isPermaLink="false"><![CDATA[1eb5624ea95cbd2adff9596b14953ebc]]></guid>
 			<link><![CDATA[http://letterpressdigest.com]]></link>
-			<itunes:image href="https://ssl-static.libsyn.com/p/assets/0/9/8/e/098e32dd1672c185/letterpress_digest_type_final-min.png" />
+			<itunes:image href="https://letterpressdigest.s3.us-east-2.amazonaws.com/letterpress+digest+type_FINAL.jpg" />
 			<description><![CDATA[<p>Erin Beckloff & Andrew Quinn created a documentary about letterpress printing called Pressing On. Hear about the multi-year process, from kickstarter to its debut at Hatch Show Print.</p>]]></description>
 			<content:encoded><![CDATA[<p>Erin Beckloff & Andrew Quinn created a documentary about letterpress printing called Pressing On. Hear about the multi-year process, from kickstarter to its debut at Hatch Show Print.</p>]]></content:encoded>
-			<enclosure length="52470944" type="audio/mpeg" url="https://traffic.libsyn.com/secure/letterpressdigest/007____Erin__Andrew._Pressing_On..mp3?dest-id=562602" />
+			<enclosure length="52470944" type="audio/mpeg" url="https://letterpressdigest.s3.us-east-2.amazonaws.com/007+__+Erin+%26+Andrew.+Pressing+On..mp3" />
 			<itunes:duration>53:26</itunes:duration>
 			<itunes:explicit>no</itunes:explicit>
 			<itunes:keywords />
@@ -149,10 +148,10 @@
 			<pubDate>Tue, 24 Oct 2017 05:00:00 +0000</pubDate>
 			<guid isPermaLink="false"><![CDATA[2a67fc826ace5a8a0b3c41f68d86bdb0]]></guid>
 			<link><![CDATA[http://letterpressdigest.com]]></link>
-			<itunes:image href="https://ssl-static.libsyn.com/p/assets/0/9/8/e/098e32dd1672c185/letterpress_digest_type_final-min.png" />
+			<itunes:image href="https://letterpressdigest.s3.us-east-2.amazonaws.com/letterpress+digest+type_FINAL.jpg" />
 			<description><![CDATA[<p>Eli is half printer/half designer and fantastic and educating people on letterpress. You'll learn so much in this episode, with a few laughs along the way.</p>]]></description>
 			<content:encoded><![CDATA[<p>Eli is half printer/half designer and fantastic and educating people on letterpress. You'll learn so much in this episode, with a few laughs along the way.</p>]]></content:encoded>
-			<enclosure length="55631134" type="audio/mpeg" url="https://traffic.libsyn.com/secure/letterpressdigest/006____Eli_Epstein._Union_Press..mp3?dest-id=562602" />
+			<enclosure length="55631134" type="audio/mpeg" url="https://letterpressdigest.s3.us-east-2.amazonaws.com/006+__+Eli+Epstein.+Union+Press..mp3" />
 			<itunes:duration>56:44</itunes:duration>
 			<itunes:explicit>no</itunes:explicit>
 			<itunes:keywords />
@@ -164,10 +163,10 @@
 			<pubDate>Tue, 10 Oct 2017 05:00:00 +0000</pubDate>
 			<guid isPermaLink="false"><![CDATA[83f0638240449a5945b69070818fffde]]></guid>
 			<link><![CDATA[http://letterpressdigest.com]]></link>
-			<itunes:image href="https://ssl-static.libsyn.com/p/assets/0/9/8/e/098e32dd1672c185/letterpress_digest_type_final-min.png" />
+			<itunes:image href="https://letterpressdigest.s3.us-east-2.amazonaws.com/letterpress+digest+type_FINAL.jpg" />
 			<description><![CDATA[<p>Designer and entrepreneur Micah Whitson talks about starting his business, The Old Try, and how he designs and sells letterpress prints. He does not, however, print them himself... hear him explain why in his own words.</p>]]></description>
 			<content:encoded><![CDATA[<p>Designer and entrepreneur Micah Whitson talks about starting his business, The Old Try, and how he designs and sells letterpress prints. He does not, however, print them himself... hear him explain why in his own words.</p>]]></content:encoded>
-			<enclosure length="48796665" type="audio/mpeg" url="https://traffic.libsyn.com/secure/letterpressdigest/005____Micah_Whitson._The_Old_Try..mp3?dest-id=562602" />
+			<enclosure length="48796665" type="audio/mpeg" url="https://letterpressdigest.s3.us-east-2.amazonaws.com/005+__+Micah+Whitson.+The+Old+Try..mp3" />
 			<itunes:duration>49:37</itunes:duration>
 			<itunes:explicit>no</itunes:explicit>
 			<itunes:keywords />
@@ -179,10 +178,10 @@
 			<pubDate>Tue, 26 Sep 2017 05:00:00 +0000</pubDate>
 			<guid isPermaLink="false"><![CDATA[afd308edffef623e169a247b764af673]]></guid>
 			<link><![CDATA[http://letterpressdigest.com]]></link>
-			<itunes:image href="https://ssl-static.libsyn.com/p/assets/0/9/8/e/098e32dd1672c185/letterpress_digest_type_final-min.png" />
+			<itunes:image href="https://letterpressdigest.s3.us-east-2.amazonaws.com/letterpress+digest+type_FINAL.jpg" />
 			<description><![CDATA[<p>Most letterpress printers have heard of or use a Boxcar Base and clear photopolymer plates. Harold Kyle, Boxcar's president, talks about how those came about, his affinity for moving large presses, and so much more.</p>]]></description>
 			<content:encoded><![CDATA[<p>Most letterpress printers have heard of or use a Boxcar Base and clear photopolymer plates. Harold Kyle, Boxcar's president, talks about how those came about, his affinity for moving large presses, and so much more.</p>]]></content:encoded>
-			<enclosure length="53898499" type="audio/mpeg" url="https://traffic.libsyn.com/secure/letterpressdigest/004____Harold_Kyle._Boxcar_Press.1.mp3?dest-id=562602" />
+			<enclosure length="53898499" type="audio/mpeg" url="https://letterpressdigest.s3.us-east-2.amazonaws.com/004+__+Harold+Kyle.+Boxcar+Press.1.mp3" />
 			<itunes:duration>54:55</itunes:duration>
 			<itunes:explicit>no</itunes:explicit>
 			<itunes:keywords />
@@ -194,10 +193,10 @@
 			<pubDate>Tue, 12 Sep 2017 05:00:00 +0000</pubDate>
 			<guid isPermaLink="false"><![CDATA[d45b8abbfd5fbf2d90d28724f6d78b37]]></guid>
 			<link><![CDATA[http://letterpressdigest.com/]]></link>
-			<itunes:image href="https://ssl-static.libsyn.com/p/assets/0/9/8/e/098e32dd1672c185/letterpress_digest_type_final-min.png" />
+			<itunes:image href="https://letterpressdigest.s3.us-east-2.amazonaws.com/letterpress+digest+type_FINAL.jpg" />
 			<description><![CDATA[<p>Hamilton Wood Type is a ubiquitous name in letterpress printing. Hear Jim Moran, the Hamilton Wood Type museum director, talk about the company's history how they preserve that legacy today.</p>]]></description>
 			<content:encoded><![CDATA[<p>Hamilton Wood Type is a ubiquitous name in letterpress printing. Hear Jim Moran, the Hamilton Wood Type museum director, talk about the company's history how they preserve that legacy today.</p>]]></content:encoded>
-			<enclosure length="56520706" type="audio/mpeg" url="https://traffic.libsyn.com/secure/letterpressdigest/003____Jim_Moran._Hamilton_Wood_Type_Museum..mp3?dest-id=562602" />
+			<enclosure length="56520706" type="audio/mpeg" url="https://letterpressdigest.s3.us-east-2.amazonaws.com/003+__+Jim+Moran.+Hamilton+Wood+Type+Museum..mp3" />
 			<itunes:duration>57:39</itunes:duration>
 			<itunes:explicit>no</itunes:explicit>
 			<itunes:keywords />
@@ -209,10 +208,10 @@
 			<pubDate>Tue, 29 Aug 2017 07:30:00 +0000</pubDate>
 			<guid isPermaLink="false"><![CDATA[1f49b9c45196bceefc491bbea395dca6]]></guid>
 			<link><![CDATA[http://letterpressdigest.com]]></link>
-			<itunes:image href="https://ssl-static.libsyn.com/p/assets/0/9/8/e/098e32dd1672c185/letterpress_digest_type_final-min.png" />
+			<itunes:image href="https://letterpressdigest.s3.us-east-2.amazonaws.com/letterpress+digest+type_FINAL.jpg" />
 			<description><![CDATA[<p>Who else has a font designed for Microsoft based on their handwriting? Brian Allen does. Hear him talk about the letterpress progression through the most recent decades and and his love for type.</p>]]></description>
 			<content:encoded><![CDATA[<p>Who else has a font designed for Microsoft based on their handwriting? Brian Allen does. Hear him talk about the letterpress progression through the most recent decades and and his love for type.</p>]]></content:encoded>
-			<enclosure length="53523366" type="audio/mpeg" url="https://traffic.libsyn.com/secure/letterpressdigest/002____Brian_Allen._The_Artisan_Printer..mp3?dest-id=562602" />
+			<enclosure length="53523366" type="audio/mpeg" url="https://letterpressdigest.s3.us-east-2.amazonaws.com/002+__+Brian+Allen.+The+Artisan+Printer..mp3" />
 			<itunes:duration>54:32</itunes:duration>
 			<itunes:explicit>no</itunes:explicit>
 			<itunes:keywords />
@@ -225,10 +224,10 @@
 			<pubDate>Tue, 29 Aug 2017 05:00:00 +0000</pubDate>
 			<guid isPermaLink="false"><![CDATA[ae1b96e60a4be8859ffd295851ddc524]]></guid>
 			<link><![CDATA[http://letterpressdigest.com]]></link>
-			<itunes:image href="https://ssl-static.libsyn.com/p/assets/0/9/8/e/098e32dd1672c185/letterpress_digest_type_final-min.png" />
+			<itunes:image href="https://letterpressdigest.s3.us-east-2.amazonaws.com/letterpress+digest+type_FINAL.jpg" />
 			<description><![CDATA[<p>Hear how Jessica White, co-founder of Ladies of Letterpress, snuck in her university studio at midnight to print letterpress for the first time. She also talks about her first press, learning to print, and flying planes.</p>]]></description>
 			<content:encoded><![CDATA[<p>Hear how Jessica White, co-founder of Ladies of Letterpress, snuck in her university studio at midnight to print letterpress for the first time. She also talks about her first press, learning to print, and flying planes.</p>]]></content:encoded>
-			<enclosure length="58094679" type="audio/mpeg" url="https://traffic.libsyn.com/secure/letterpressdigest/001____Jessica_White._Ladies_of_Letterpress_Co-founder..mp3?dest-id=562602" />
+			<enclosure length="58094679" type="audio/mpeg" url="https://letterpressdigest.s3.us-east-2.amazonaws.com/001+__+Jessica+White.+Ladies+of+Letterpress+Co-founder..mp3" />
 			<itunes:duration>57:46</itunes:duration>
 			<itunes:explicit>no</itunes:explicit>
 			<itunes:keywords />
@@ -241,10 +240,10 @@
 			<pubDate>Thu, 24 Aug 2017 17:36:34 +0000</pubDate>
 			<guid isPermaLink="false"><![CDATA[248a24022db57a05c7541dfc10c6bbdd]]></guid>
 			<link><![CDATA[http://letterpressdigest.com]]></link>
-			<itunes:image href="https://ssl-static.libsyn.com/p/assets/0/9/8/e/098e32dd1672c185/letterpress_digest_type_final-min.png" />
+			<itunes:image href="https://letterpressdigest.s3.us-east-2.amazonaws.com/letterpress+digest+type_FINAL.jpg" />
 			<description><![CDATA[<p>Welcome to the first episode of Letterpress Digest, a podcast by Jordan Berry about all things letterpress. Jordan is a novice printer and will talk to the experts to hear exciting stories, gather helpful tips, and just "talk shop".</p>]]></description>
 			<content:encoded><![CDATA[<p>Welcome to the first episode of Letterpress Digest, a podcast by Jordan Berry about all things letterpress. Jordan is a novice printer and will talk to the experts to hear exciting stories, gather helpful tips, and just "talk shop".</p>]]></content:encoded>
-			<enclosure length="21000457" type="audio/mpeg" url="https://traffic.libsyn.com/secure/letterpressdigest/000____Lets_talk_shop._Letterpress_Digest_Introduction..mp3?dest-id=562602" />
+			<enclosure length="21000457" type="audio/mpeg" url="https://letterpressdigest.s3.us-east-2.amazonaws.com/000+__+Lets+talk+shop.+Letterpress+Digest+Introduction..mp3" />
 			<itunes:duration>12:42</itunes:duration>
 			<itunes:explicit>no</itunes:explicit>
 			<itunes:keywords />
