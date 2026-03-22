@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Letterpress Digest — A Podcast About Letterpress Printing</title>
+  <meta name="description" content="Jordan Berry interviews influential artists, designers, and printers in the letterpress community.">
+  <link rel="alternate" type="application/rss+xml" title="Letterpress Digest" href="https://letterpressdigest.s3.us-east-2.amazonaws.com/feed.xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=EB+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --paper:  #f5f0e8;
+      --ink:    #1a1508;
+      --accent: #5c3d2e;
+      --rule:   #c4a882;
+      --faint:  #e0d4be;
+      --muted:  #7a6a55;
+    }
+
+    html { font-size: 18px; }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: 'EB Garamond', Georgia, serif;
+      line-height: 1.7;
+    }
+
+    .wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--faint);
+      margin: 2.25rem 0;
+    }
+    hr.heavy {
+      border-top: 2px solid var(--ink);
+      margin: 2.5rem 0;
+    }
+
+    /* ── HEADER — artwork masthead ── */
+    .site-header {
+      text-align: center;
+      padding: 3.5rem 0 2rem;
+    }
+    .artwork-frame {
+      display: inline-block;
+      border: 1px solid var(--rule);
+      padding: 8px;
+      background: var(--paper);
+      box-shadow: 4px 4px 0 var(--faint);
+      margin-bottom: 2rem;
+    }
+    .artwork-frame img {
+      display: block;
+      width: 260px;
+      height: 260px;
+      object-fit: cover;
+    }
+    .site-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 900;
+      font-size: clamp(2rem, 6vw, 3rem);
+      line-height: 1.1;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+    .title-rule {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin: 0.9rem 0;
+      justify-content: center;
+    }
+    .title-rule span {
+      height: 1px;
+      width: 60px;
+      background: var(--rule);
+      display: block;
+    }
+    .title-rule em {
+      font-family: 'EB Garamond', serif;
+      font-style: italic;
+      font-size: 1rem;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+    .site-byline {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--muted);
+      margin-top: 0.5rem;
+    }
+
+    /* ── ABOUT ── */
+    .about {
+      padding: 0.5rem 0;
+    }
+    .about p {
+      font-size: 1rem;
+      line-height: 1.8;
+      text-align: center;
+      max-width: 580px;
+      margin: 0 auto;
+    }
+
+    /* ── SUBSCRIBE ── */
+    .subscribe {
+      text-align: center;
+      padding: 0.5rem 0 1rem;
+    }
+    .subscribe-label {
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      color: var(--muted);
+      display: block;
+      margin-bottom: 0.65rem;
+    }
+    .subscribe-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.25rem 0;
+    }
+    .subscribe-links a {
+      font-size: 0.9rem;
+      color: var(--accent);
+      text-decoration: none;
+      padding: 0 0.65rem;
+      border-right: 1px solid var(--rule);
+      line-height: 1;
+      transition: color 0.15s;
+    }
+    .subscribe-links a:last-child { border-right: none; }
+    .subscribe-links a:hover { color: var(--ink); }
+
+    /* ── EPISODES ── */
+    .ep-section-label {
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .episode {
+      display: grid;
+      grid-template-columns: 2.5rem 1fr;
+      gap: 0 0.85rem;
+      padding: 1.75rem 0;
+      border-bottom: 1px solid var(--faint);
+    }
+    .episode:first-of-type { padding-top: 0; }
+
+    .ep-num {
+      font-size: 0.68rem;
+      color: var(--rule);
+      letter-spacing: 0.08em;
+      padding-top: 0.25rem;
+      text-align: right;
+    }
+    .ep-body {}
+    .ep-head {
+      display: flex;
+      align-items: baseline;
+      gap: 0.75rem;
+      margin-bottom: 0.4rem;
+    }
+    .ep-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.3;
+      flex: 1;
+    }
+    .ep-dur {
+      font-size: 0.72rem;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+      flex-shrink: 0;
+    }
+    .ep-date {
+      font-size: 0.72rem;
+      color: var(--rule);
+      letter-spacing: 0.04em;
+    }
+    .ep-desc {
+      font-size: 0.93rem;
+      color: var(--muted);
+      line-height: 1.65;
+      margin-bottom: 0.85rem;
+    }
+
+    /* ── PLAYER ── */
+    .ep-player {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+    .ep-play {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 1.5px solid var(--accent);
+      background: transparent;
+      color: var(--accent);
+      cursor: pointer;
+      font-size: 0.7rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      padding-left: 2px;
+      transition: background 0.15s, color 0.15s;
+    }
+    .ep-play:hover { background: var(--accent); color: var(--paper); }
+    .ep-track {
+      flex: 1;
+      height: 1px;
+      background: var(--rule);
+      cursor: pointer;
+      position: relative;
+    }
+    .ep-fill {
+      position: absolute;
+      left: 0; top: 0;
+      height: 100%;
+      background: var(--accent);
+      width: 0;
+    }
+    .ep-time {
+      font-size: 0.7rem;
+      color: var(--muted);
+      white-space: nowrap;
+      flex-shrink: 0;
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      padding: 2.5rem 0 3.5rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+      line-height: 2;
+      border-top: 1px solid var(--faint);
+    }
+    footer .orn {
+      color: var(--rule);
+      display: block;
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+      letter-spacing: 0.4em;
+    }
+    footer a { color: var(--accent); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 480px) {
+      .artwork-frame img { width: 200px; height: 200px; }
+      .episode { grid-template-columns: 1.75rem 1fr; }
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ── HEADER ── -->
+  <header class="site-header">
+    <div class="artwork-frame">
+      <img src="https://letterpressdigest.s3.us-east-2.amazonaws.com/letterpress+digest+type_FINAL.jpg" alt="Letterpress Digest">
+    </div>
+    <h1 class="site-title">Letterpress Digest</h1>
+    <div class="title-rule">
+      <span></span>
+      <em>A Podcast About Letterpress Printing</em>
+      <span></span>
+    </div>
+    <p class="site-byline">Jordan Berry &nbsp;·&nbsp; 14 Episodes &nbsp;·&nbsp; 2017 – 2026</p>
+  </header>
+
+  <hr>
+
+  <!-- ── ABOUT ── -->
+  <section class="about">
+    <p>In the <em>Letterpress Digest</em> podcast, novice printer Jordan Berry talks about all things letterpress with some of the most influential and experienced artists, designers, and printers working today. You'll hear guests talk about the resurgence of letterpress, their first printing press, how they launched their businesses, what inks and papers they use, and much more — with a few entertaining stories along the way.</p>
+  </section>
+
+  <hr>
+
+  <!-- ── SUBSCRIBE ── -->
+  <div class="subscribe">
+    <span class="subscribe-label">Listen &amp; Subscribe</span>
+    <div class="subscribe-links">
+      <a href="https://podcasts.apple.com/us/podcast/letterpress-digest-a-podcast-about-letterpress-printing/id1274859013" target="_blank" rel="noopener">Apple Podcasts</a>
+      <a href="https://open.spotify.com/show/4wgI0vQuk3Q45lYl2Oy11J" target="_blank" rel="noopener">Spotify</a>
+      <a href="https://iheart.com/podcast/92237374/" target="_blank" rel="noopener">iHeartRadio</a>
+      <a href="https://letterpressdigest.s3.us-east-2.amazonaws.com/feed.xml" target="_blank" rel="noopener">RSS</a>
+    </div>
+  </div>
+
+  <hr class="heavy">
+
+  <!-- ── EPISODES ── -->
+  <p class="ep-section-label">All Episodes</p>
+
+  <div class="episode-list">
+
+    <article class="episode">
+      <span class="ep-num">000</span>
+      <div class="ep-body">
+        <div class="ep-head">
+          <h2 class="ep-title">Let's Talk Shop. Introduction.</h2>
+          <span class="ep-dur">12:42</span>
+        </div>
+        <span class="ep-date">Aug 24, 2017</span>
+        <p class="ep-desc">Welcome to the first episode of Letterpress Digest. Jordan is a novice printer and will talk to the experts to hear exciting stories, gather helpful tips, and just talk shop.</p>
+        <div class="ep-player" data-src="https://letterpressdigest.s3.us-east-2.amazonaws.com/000+__+Lets+talk+shop.+Letterpress+Digest+Introduction..mp3">
+          <button class="ep-play" onclick="togglePlay(this)">▶</button>
+          <div class="ep-track"><div class="ep-fill"></div></div>
+          <span class="ep-time"><span class="ep-curr">0:00</span> / 12:42</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="episode">
+      <span class="ep-num">001</span>
+      <div class="ep-body">
+        <div class="ep-head">
+          <h2 class="ep-title">Jessica White. Ladies of Letterpress Co-founder.</h2>
+          <span class="ep-dur">57:46</span>
+        </div>
+        <span class="ep-date">Aug 29, 2017</span>
+        <p class="ep-desc">Hear how Jessica White, co-founder of Ladies of Letterpress, snuck into her university studio at midnight to print letterpress for the first time. She also talks about her first press, learning to print, and flying planes.</p>
+        <div class="ep-player" data-src="https://letterpressdigest.s3.us-east-2.amazonaws.com/001+__+Jessica+White.+Ladies+of+Letterpress+Co-founder..mp3">
+          <button class="ep-play" onclick="togglePlay(this)">▶</button>
+          <div class="ep-track"><div class="ep-fill"></div></div>
+          <span class="ep-time"><span class="ep-curr">0:00</span> / 57:46</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="episode">
+      <span class="ep-num">002</span>
+      <div class="ep-body">
+        <div class="ep-head">
+          <h2 class="ep-title">Brian Allen. The Artisan Printer.</h2>
+          <span class="ep-dur">54:32</span>
+        </div>
+        <span class="ep-date">Aug 29, 2017</span>
+        <p class="ep-desc">Who else has a font designed for Microsoft based on their handwriting? Brian Allen does. Hear him talk about the letterpress progression through the most recent decades and his love for type.</p>
+        <div class="ep-player" data-src="https://letterpressdigest.s3.us-east-2.amazonaws.com/002+__+Brian+Allen.+The+Artisan+Printer..mp3">
+          <button class="ep-play" onclick="togglePlay(this)">▶</button>
+          <div class="ep-track"><div class="ep-fill"></div></div>
+          <span class="ep-time"><span class="ep-curr">0:00</span> / 54:32</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="episode">
+      <span class="ep-num">003</span>
+      <div class="ep-body">
+        <div class="ep-head">
+          <h2 class="ep-title">Jim Moran. Hamilton Wood Type Museum.</h2>
+          <span class="ep-dur">57:39</span>
+        </div>
+        <span class="ep-date">Sep 12, 2017</span>
+        <p class="ep-desc">Hamilton Wood Type is a ubiquitous name in letterpress printing. Hear Jim Moran, the museum's director, talk about the company's history and how they preserve that legacy today.</p>
+        <div class="ep-player" data-src="https://letterpressdigest.s3.us-east-2.amazonaws.com/003+__+Jim+Moran.+Hamilton+Wood+Type+Museum..mp3">
+          <button class="ep-play" onclick="togglePlay(this)">▶</button>
+          <div class="ep-track"><div class="ep-fill"></div></div>
+          <span class="ep-time"><span class="ep-curr">0:00</span> / 57:39</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="episode">
+      <span class="ep-num">004</span>
+      <div class="ep-body">
+        <div class="ep-head">
+          <h2 class="ep-title">Harold Kyle. Boxcar Press.</h2>
+          <span class="ep-dur">54:55</span>
+        </div>
+        <span class="ep-date">Sep 26, 2017</span>
+        <p class="ep-desc">Most letterpress printers have heard of or use a Boxcar Base and clear photopolymer plates. Harold Kyle, Boxcar's president, talks about how those came about, his affinity for moving large presses, and so much more.</p>
+        <div class="ep-player" data-src="https://letterpressdigest.s3.us-east-2.amazonaws.com/004+__+Harold+Kyle.+Boxcar+Press.1.mp3">
+          <button class="ep-play" onclick="togglePlay(this)">▶</button>
+          <div class="ep-track"><div class="ep-fill"></div></div>
+          <span class="ep-time"><span class="ep-curr">0:00</span> / 54:55</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="episode">
+      <span class="ep-num">005</span>
+      <div class="ep-body">
+        <div class="ep-head">
+          <h2 class="ep-title">Micah Whitson. The Old Try.</h2>
+          <span class="ep-dur">49:37</span>
+        </div>
+        <span class="ep-date">Oct 10, 2017</span>
+        <p class="ep-desc">Designer and entrepreneur Micah Whitson talks about starting The Old Try, and how he designs and sells letterpress prints. He does not, however, print them himself — hear him explain why in his own words.</p>
+        <div class="ep-player" data-src="https://letterpressdigest.s3.us-east-2.amazonaws.com/005+__+Micah+Whitson.+The+Old+Try..mp3">
+          <button class="ep-play" onclick="togglePlay(this)">▶</button>
+          <div class="ep-track"><div class="ep-fill"></div></div>
+          <span class="ep-time"><span class="ep-curr">0:00</span> / 49:37</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="episode">
+      <span class="ep-num">006</span>
+      <div class="ep-body">
+        <div class="ep-head">
+          <h2 class="ep-title">Eli Epstein. Union Press.</h2>
+          <span class="ep-dur">56:44</span>
+        </div>
+        <span class="ep-date">Oct 24, 2017</span>
+        <p class="ep-desc">Eli is half printer, half designer, and fantastic at educating people on letterpress. You'll learn so much in this episode, with a few laughs along the way.</p>
+        <div class="ep-player" data-src="https://letterpressdigest.s3.us-east-2.amazonaws.com/006+__+Eli+Epstein.+Union+Press..mp3">
+          <button class="ep-play" onclick="togglePlay(this)">▶</button>
+          <div class="ep-track"><div class="ep-fill"></div></div>
+          <span class="ep-time"><span class="ep-curr">0:00</span> / 56:44</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="episode">
+      <span class="ep-num">007</span>
+      <div class="ep-body">
+        <div class="ep-head">
+          <h2 class="ep-title">Erin &amp; Andrew. Pressing On.</h2>
+          <span class="ep-dur">53:26</span>
+        </div>
+        <span class="ep-date">Nov 7, 2017</span>
+        <p class="ep-desc">Erin Beckloff &amp; Andrew Quinn created a documentary about letterpress printing called <em>Pressing On</em>. Hear about the multi-year process, from Kickstarter to its debut at Hatch Show Print.</p>
+        <div class="ep-player" data-src="https://letterpressdigest.s3.us-east-2.amazonaws.com/007+__+Erin+%26+Andrew.+Pressing+On..mp3">
+          <button class="ep-play" onclick="togglePlay(this)">▶</button>
+          <div class="ep-track"><div class="ep-fill"></div></div>
+          <span class="ep-time"><span class="ep-curr">0:00</span> / 53:26</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="episode">
+      <span class="ep-num">008</span>
+      <div class="ep-body">
+        <div class="ep-head">
+          <h2 class="ep-title">Adrian Ramos. Ramco Roller.</h2>
+          <span class="ep-dur">1:01:57</span>
+        </div>
+        <span class="ep-date">Nov 21, 2017</span>
+        <p class="ep-desc">Adrian Ramos of Ramco Roller gives us the rundown on all things rubber — the history of letterpress rollers, the superball, and even the option for strawberry-scented rubber rollers. What?</p>
+        <div class="ep-player" data-src="https://letterpressdigest.s3.us-east-2.amazonaws.com/008+__+Adrian+Ramos.+Ramco+Roller..mp3">
+          <button class="ep-play" onclick="togglePlay(this)">▶</button>
+          <div class="ep-track"><div class="ep-fill"></div></div>
+          <span class="ep-time"><span class="ep-curr">0:00</span> / 1:01:57</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="episode">
+      <span class="ep-num">009</span>
+      <div class="ep-body">
+        <div class="ep-head">
+          <h2 class="ep-title">Steve Varvaro. Southpaw Printers.</h2>
+          <span class="ep-dur">1:04:11</span>
+        </div>
+        <span class="ep-date">Dec 5, 2017</span>
+        <p class="ep-desc">Paper. Steve Varvaro has over 30 years in the paper business. We spend the hour talking about all things paper as it applies to letterpress — text vs. cover weights, thickness, finish, grain, and so much more.</p>
+        <div class="ep-player" data-src="https://letterpressdigest.s3.us-east-2.amazonaws.com/009+__+Steve+Varvaro.+Southpaw+Printers..mp3">
+          <button class="ep-play" onclick="togglePlay(this)">▶</button>
+          <div class="ep-track"><div class="ep-fill"></div></div>
+          <span class="ep-time"><span class="ep-curr">0:00</span> / 1:04:11</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="episode">
+      <span class="ep-num">010</span>
+      <div class="ep-body">
+        <div class="ep-head">
+          <h2 class="ep-title">Britt Rohr. Swell Press.</h2>
+          <span class="ep-dur">51:33</span>
+        </div>
+        <span class="ep-date">Dec 19, 2017</span>
+        <p class="ep-desc">Britt Rohr is the Master of Quoin. She runs a custom letterpress shop called Swell Press Paper Co. in Los Angeles, and her forte is watercolor dip-dye and deep impressions.</p>
+        <div class="ep-player" data-src="https://letterpressdigest.s3.us-east-2.amazonaws.com/010+__+Britt+Rohr.+Swell+Press..mp3">
+          <button class="ep-play" onclick="togglePlay(this)">▶</button>
+          <div class="ep-track"><div class="ep-fill"></div></div>
+          <span class="ep-time"><span class="ep-curr">0:00</span> / 51:33</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="episode">
+      <span class="ep-num">011</span>
+      <div class="ep-body">
+        <div class="ep-head">
+          <h2 class="ep-title">Paul Moxon. Vanderblog.</h2>
+          <span class="ep-dur">1:03:09</span>
+        </div>
+        <span class="ep-date">Jan 16, 2018</span>
+        <p class="ep-desc">Paul Moxon runs the Vanderblog and travels teaching folks about Vandercook presses while helping to repair them. He's got experience in mechanics, history, and the arts — and shares a lot during this hour-long conversation.</p>
+        <div class="ep-player" data-src="https://letterpressdigest.s3.us-east-2.amazonaws.com/011+__+Paul+Moxon.+Vanderblog.+1.mp3">
+          <button class="ep-play" onclick="togglePlay(this)">▶</button>
+          <div class="ep-track"><div class="ep-fill"></div></div>
+          <span class="ep-time"><span class="ep-curr">0:00</span> / 1:03:09</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="episode">
+      <span class="ep-num">012</span>
+      <div class="ep-body">
+        <div class="ep-head">
+          <h2 class="ep-title">Jen Farrell. Starshaped Press.</h2>
+          <span class="ep-dur">58:41</span>
+        </div>
+        <span class="ep-date">Apr 6, 2018</span>
+        <p class="ep-desc">Jen is the proprietor and creative entrepreneur at Starshaped Press. She's been printing like it's 1929 since 1999 and is one of the foremost artists pushing the fold to creatively use old type in new and energizing ways.</p>
+        <div class="ep-player" data-src="https://letterpressdigest.s3.us-east-2.amazonaws.com/012+__+Jen+Farrell.+Starshaped+Press..mp3">
+          <button class="ep-play" onclick="togglePlay(this)">▶</button>
+          <div class="ep-track"><div class="ep-fill"></div></div>
+          <span class="ep-time"><span class="ep-curr">0:00</span> / 58:41</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="episode">
+      <span class="ep-num">013</span>
+      <div class="ep-body">
+        <div class="ep-head">
+          <h2 class="ep-title">Andrew Steeves. Gaspereau Press.</h2>
+          <span class="ep-dur">1:01:33</span>
+        </div>
+        <span class="ep-date">May 21, 2018</span>
+        <p class="ep-desc">Andrew Steeves gets a bit philosophical on us as we discuss the inner workings of letterpress printing, publishing, and more. So much wisdom shared in only 1 hour.</p>
+        <div class="ep-player" data-src="https://letterpressdigest.s3.us-east-2.amazonaws.com/013+__+Andrew+Steeves.+Gaspereau+Press..mp3">
+          <button class="ep-play" onclick="togglePlay(this)">▶</button>
+          <div class="ep-track"><div class="ep-fill"></div></div>
+          <span class="ep-time"><span class="ep-curr">0:00</span> / 1:01:33</span>
+        </div>
+      </div>
+    </article>
+
+  </div><!-- /.episode-list -->
+
+  <footer>
+    <span class="orn">✦ &ensp; ✦ &ensp; ✦</span>
+    <p>Letterpress Digest &copy; 2018 – 2026 Jordan Berry</p>
+    <p><a href="https://letterpressdigest.s3.us-east-2.amazonaws.com/feed.xml">RSS Feed</a></p>
+  </footer>
+
+</div><!-- /.wrap -->
+
+<script>
+(function () {
+  var current = null;
+
+  function fmt(s) {
+    s = Math.floor(s || 0);
+    var m = Math.floor(s / 60), sec = s % 60;
+    return m + ':' + (sec < 10 ? '0' : '') + sec;
+  }
+
+  window.togglePlay = function (btn) {
+    var player = btn.closest('.ep-player');
+    var fill   = player.querySelector('.ep-fill');
+    var curr   = player.querySelector('.ep-curr');
+
+    if (!player._audio) {
+      player._audio = new Audio(player.dataset.src);
+      player._audio.addEventListener('timeupdate', function () {
+        var pct = player._audio.currentTime / player._audio.duration * 100 || 0;
+        fill.style.width = pct + '%';
+        curr.textContent = fmt(player._audio.currentTime);
+      });
+      player._audio.addEventListener('ended', function () {
+        btn.textContent = '▶';
+        fill.style.width = '0';
+        curr.textContent = '0:00';
+        current = null;
+      });
+    }
+
+    if (player._audio.paused) {
+      if (current && current !== player && current._audio) {
+        current._audio.pause();
+        current.querySelector('.ep-play').textContent = '▶';
+      }
+      current = player;
+      player._audio.play();
+      btn.textContent = '⏸';
+    } else {
+      player._audio.pause();
+      btn.textContent = '▶';
+    }
+  };
+
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.ep-track').forEach(function (track) {
+      track.addEventListener('click', function (e) {
+        var player = track.closest('.ep-player');
+        if (!player._audio || !player._audio.duration) return;
+        var rect = track.getBoundingClientRect();
+        player._audio.currentTime = ((e.clientX - rect.left) / rect.width) * player._audio.duration;
+      });
+    });
+  });
+}());
+</script>
+</body>
+</html>
