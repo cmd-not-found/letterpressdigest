@@ -18,7 +18,6 @@
 		</image>
 		<itunes:author>Jordan Berry</itunes:author>
 		<itunes:keywords>design,letterpressprinting,printing,printmaking</itunes:keywords>
-		<itunes:category text="Arts"></itunes:category>
 		<itunes:category text="Arts">
 			<itunes:category text="Design"/>
 		</itunes:category>
@@ -35,6 +34,7 @@
 		<itunes:subtitle><![CDATA[An interview and informational show about all things letterpress.]]></itunes:subtitle>
 		<itunes:type>episodic</itunes:type>
 			<itunes:new-feed-url>https://letterpressdigest.s3.us-east-2.amazonaws.com/feed.xml</itunes:new-feed-url>
+		<itunes:complete>yes</itunes:complete>
 
 
 
