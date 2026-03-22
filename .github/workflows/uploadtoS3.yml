@@ -6,8 +6,8 @@ on:
   push:
     branches: # but only for the main branch
       - main
-    paths: # and only changes to the public folder
-      - public/*
+    paths: # and only changes to the docs folder
+      - docs/*
 # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -24,4 +24,4 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.AWS_REGION }}
-      - run: aws s3 sync ./public s3://${{ secrets.AWS_S3_BUCKET }} --follow-symlinks
+      - run: aws s3 sync ./docs s3://${{ secrets.AWS_S3_BUCKET }} --follow-symlinks --exclude 'CNAME'
