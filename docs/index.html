@@ -596,26 +596,30 @@
     return m + ':' + (sec < 10 ? '0' : '') + sec;
   }
 
+  function initAudio(player) {
+    if (player._audio) return;
+    var fill = player.querySelector('.ep-fill');
+    var curr = player.querySelector('.ep-curr');
+    var btn  = player.querySelector('.ep-play');
+    player._audio = new Audio(player.dataset.src);
+    player._audio.preload = 'metadata';
+    player._audio.addEventListener('timeupdate', function () {
+      var pct = player._audio.currentTime / player._audio.duration * 100 || 0;
+      fill.style.width = pct + '%';
+      curr.textContent = fmt(player._audio.currentTime);
+    });
+    player._audio.addEventListener('ended', function () {
+      btn.textContent = '▶';
+      fill.style.width = '0';
+      curr.textContent = '0:00';
+      player.classList.remove('playing');
+      current = null;
+    });
+  }
+
   window.togglePlay = function (btn) {
     var player = btn.closest('.ep-player');
-    var fill   = player.querySelector('.ep-fill');
-    var curr   = player.querySelector('.ep-curr');
-
-    if (!player._audio) {
-      player._audio = new Audio(player.dataset.src);
-      player._audio.addEventListener('timeupdate', function () {
-        var pct = player._audio.currentTime / player._audio.duration * 100 || 0;
-        fill.style.width = pct + '%';
-        curr.textContent = fmt(player._audio.currentTime);
-      });
-      player._audio.addEventListener('ended', function () {
-        btn.textContent = '▶';
-        fill.style.width = '0';
-        curr.textContent = '0:00';
-        player.classList.remove('playing');
-        current = null;
-      });
-    }
+    initAudio(player);
 
     if (player._audio.paused) {
       if (current && current !== player && current._audio) {
@@ -636,10 +640,17 @@
 
   function seek(track, clientX) {
     var player = track.closest('.ep-player');
-    if (!player._audio || !player._audio.duration) return;
+    initAudio(player);
     var rect = track.getBoundingClientRect();
     var pct = Math.max(0, Math.min(1, (clientX - rect.left) / rect.width));
-    player._audio.currentTime = pct * player._audio.duration;
+    if (player._audio.duration) {
+      player._audio.currentTime = pct * player._audio.duration;
+    } else {
+      player._audio.addEventListener('loadedmetadata', function handler() {
+        player._audio.currentTime = pct * player._audio.duration;
+        player._audio.removeEventListener('loadedmetadata', handler);
+      });
+    }
   }
 
   document.addEventListener('DOMContentLoaded', function () {
