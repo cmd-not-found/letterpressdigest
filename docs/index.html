@@ -5,6 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Letterpress Digest — A Podcast About Letterpress Printing</title>
   <meta name="description" content="Jordan Berry interviews influential artists, designers, and printers in the letterpress community.">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Letterpress Digest">
+  <meta property="og:description" content="A podcast about letterpress printing. Jordan Berry interviews influential artists, designers, and printers in the letterpress community.">
+  <meta property="og:image" content="https://letterpressdigest.s3.us-east-2.amazonaws.com/letterpress+digest+type_FINAL.jpg">
+  <meta property="og:url" content="https://letterpressdigest.com">
+  <!-- Twitter/X Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Letterpress Digest">
+  <meta name="twitter:description" content="A podcast about letterpress printing by Jordan Berry.">
+  <meta name="twitter:image" content="https://letterpressdigest.s3.us-east-2.amazonaws.com/letterpress+digest+type_FINAL.jpg">
+  <!-- Apple touch icon -->
+  <link rel="apple-touch-icon" href="https://letterpressdigest.s3.us-east-2.amazonaws.com/letterpress+digest+type_FINAL.jpg">
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="alternate" type="application/rss+xml" title="Letterpress Digest" href="https://letterpressdigest.s3.us-east-2.amazonaws.com/feed.xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -288,9 +301,23 @@
     footer a { color: var(--accent); text-decoration: none; }
     footer a:hover { text-decoration: underline; }
 
-    @media (max-width: 480px) {
+    @media (max-width: 600px) {
+      html { font-size: 16px; }
+      .wrap { padding: 0 1.25rem; }
+      .site-header { padding: 2.5rem 0 1.5rem; }
+      .artwork-frame { padding: 6px; margin-bottom: 1.5rem; }
       .artwork-frame img { width: 200px; height: 200px; }
-      .episode { grid-template-columns: 1.75rem 1fr; }
+      .site-title { letter-spacing: 0.03em; }
+      .episode { grid-template-columns: 1fr; gap: 0; }
+      .ep-num { text-align: left; padding: 0 0 0.15rem; }
+      .ep-head { flex-wrap: wrap; }
+      .ep-player { gap: 0.6rem; }
+      .ep-play { width: 40px; height: 40px; font-size: 0.85rem; }
+      .ep-track { height: 8px; border-radius: 4px; }
+      .ep-fill { border-radius: 4px; }
+      .ep-fill::after { width: 16px; height: 16px; right: -6px; top: -4px; }
+      .subscribe-links { gap: 0.4rem 0; }
+      .subscribe-links a { padding: 0.3rem 0.65rem; }
     }
   </style>
 </head>
