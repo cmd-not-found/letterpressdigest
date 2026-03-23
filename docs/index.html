@@ -634,15 +634,38 @@
     }
   };
 
+  function seek(track, clientX) {
+    var player = track.closest('.ep-player');
+    if (!player._audio || !player._audio.duration) return;
+    var rect = track.getBoundingClientRect();
+    var pct = Math.max(0, Math.min(1, (clientX - rect.left) / rect.width));
+    player._audio.currentTime = pct * player._audio.duration;
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
+    var dragging = null;
+
     document.querySelectorAll('.ep-track').forEach(function (track) {
-      track.addEventListener('click', function (e) {
-        var player = track.closest('.ep-player');
-        if (!player._audio || !player._audio.duration) return;
-        var rect = track.getBoundingClientRect();
-        player._audio.currentTime = ((e.clientX - rect.left) / rect.width) * player._audio.duration;
+      track.addEventListener('mousedown', function (e) {
+        dragging = track;
+        seek(track, e.clientX);
+        e.preventDefault();
       });
+      track.addEventListener('touchstart', function (e) {
+        dragging = track;
+        seek(track, e.touches[0].clientX);
+      }, { passive: true });
     });
+
+    document.addEventListener('mousemove', function (e) {
+      if (dragging) seek(dragging, e.clientX);
+    });
+    document.addEventListener('touchmove', function (e) {
+      if (dragging) seek(dragging, e.touches[0].clientX);
+    }, { passive: true });
+
+    document.addEventListener('mouseup', function () { dragging = null; });
+    document.addEventListener('touchend', function () { dragging = null; });
   });
 }());
 </script>
