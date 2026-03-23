@@ -211,14 +211,14 @@
       gap: 0.7rem;
     }
     .ep-play {
-      width: 30px;
-      height: 30px;
+      width: 36px;
+      height: 36px;
       border-radius: 50%;
       border: 1.5px solid var(--accent);
       background: transparent;
       color: var(--accent);
       cursor: pointer;
-      font-size: 0.7rem;
+      font-size: 0.8rem;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -229,10 +229,12 @@
     .ep-play:hover { background: var(--accent); color: var(--paper); }
     .ep-track {
       flex: 1;
-      height: 1px;
-      background: var(--rule);
+      height: 6px;
+      background: var(--faint);
       cursor: pointer;
       position: relative;
+      border-radius: 3px;
+      overflow: visible;
     }
     .ep-fill {
       position: absolute;
@@ -240,9 +242,27 @@
       height: 100%;
       background: var(--accent);
       width: 0;
+      border-radius: 3px;
+    }
+    .ep-fill::after {
+      content: '';
+      position: absolute;
+      right: -5px;
+      top: -4px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+      opacity: 0;
+      transition: opacity 0.15s;
+    }
+    .ep-player:hover .ep-fill::after,
+    .ep-player.playing .ep-fill::after {
+      opacity: 1;
     }
     .ep-time {
-      font-size: 0.7rem;
+      font-size: 0.75rem;
       color: var(--muted);
       white-space: nowrap;
       flex-shrink: 0;
@@ -592,6 +612,7 @@
         btn.textContent = '▶';
         fill.style.width = '0';
         curr.textContent = '0:00';
+        player.classList.remove('playing');
         current = null;
       });
     }
@@ -600,12 +621,15 @@
       if (current && current !== player && current._audio) {
         current._audio.pause();
         current.querySelector('.ep-play').textContent = '▶';
+        current.classList.remove('playing');
       }
       current = player;
       player._audio.play();
+      player.classList.add('playing');
       btn.textContent = '⏸';
     } else {
       player._audio.pause();
+      player.classList.remove('playing');
       btn.textContent = '▶';
     }
   };
